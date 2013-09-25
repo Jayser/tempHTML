@@ -8,7 +8,13 @@ body {
   background-color: #ffffff;
 }
 p,
-pre {
+pre,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0;
 }
 img {
@@ -102,60 +108,7 @@ ol {
   margin: 0;
   list-style: none;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-}
 /* LESS Mixins */
-.d_x1 {
-  outline: 1px solid red;
-}
-.d_x2 {
-  outline: 1px solid red;
-}
-.d_x2 > * {
-  outline: 1px solid red;
-}
-.d_x3 {
-  outline: 1px solid red;
-}
-.d_x3 > * {
-  outline: 1px solid red;
-}
-.d_x3 > * > * {
-  outline: 1px solid red;
-}
-.d_x4 {
-  outline: 1px solid red;
-}
-.d_x4 > * {
-  outline: 1px solid red;
-}
-.d_x4 > * > * {
-  outline: 1px solid red;
-}
-.d_x4 > * > * > * {
-  outline: 1px solid red;
-}
-.d_x5 {
-  outline: 1px solid red;
-}
-.d_x5 > * {
-  outline: 1px solid red;
-}
-.d_x5 > * > * {
-  outline: 1px solid red;
-}
-.d_x5 > * > * > * {
-  outline: 1px solid red;
-}
-.d_x5 > * > * > * > * {
-  outline: 1px solid red;
-}
 /* LESS Block */
 /* LESS Page */
 /* LESS Libraries */
@@ -213,7 +166,7 @@ a {
 a:hover {
   text-decoration: none;
 }
-.wrapper {
+#wrapper {
   margin: auto;
   position: relative;
   font-size: .75em;

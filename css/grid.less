@@ -1,0 +1,42 @@
+///////////////////////////////////////////////////////////////////////
+// https://github.com/twitter/bootstrap/blob/master/less/mixins.less //  		
+///////////////////////////////////////////////////////////////////////
+
+@columns: 12;
+@column-width: 66px;
+@gutter-width: 18px;
+@grid-width: (@columns * @column-width) + (@gutter-width * (@columns - 1));
+
+@fluid-column-width: percentage(@column-width/@grid-width);
+@fluid-gutter-width: percentage(@gutter-width/@grid-width);
+
+//////////////////
+////// GRID //////
+//////////////////
+.row-fluid {
+	width: 100%;
+	.clearfix();
+	& > * {
+		float: left;
+		margin-left: @fluid-gutter-width;
+		*margin-left: @fluid-gutter-width - (.5 / @grid-width * 100 * 1%);
+	}
+	& > *:first-child {
+		margin-left: 0;
+	}
+}
+.grid (@column) {
+  float: left;
+  margin-left: @fluid-gutter-width;
+  width: (@fluid-column-width * @column) + (@fluid-gutter-width * (@column - 1));
+  *width: (@fluid-column-width * @column) + (@fluid-gutter-width * (@column - 1)) - (.5 / @grid-width * 100 * 1%);
+}
+.offset (@column) {
+    margin-left: (@fluid-column-width * @column) + (@fluid-gutter-width * (@column - 1)) + (@fluid-gutter-width * 2) !important;
+    *width: (@fluid-column-width * @column) + (@fluid-gutter-width * (@column - 1)) - (.5 / @grid-width * 100 * 1%);
+}
+.makeColumn (@columns: 1, @offset: 0) {
+  float: left;
+  margin-left: (@column-width * @offset) + (@gutter-width * (@offset - 1)) + (@gutter-width * 2);
+  width: (@column-width * @columns) + (@gutter-width * (@columns - 1));
+}
