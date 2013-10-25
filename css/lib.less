@@ -1,0 +1,342 @@
+/*
+ * @Library by S@rhan1988 v.1
+ * created: 23.10.2013
+ * 
+ * 1. layout
+ * 2. text
+ *    2.1 color
+ *    2.2 size
+ *    2.3 layout
+ *    2.4 style
+ *    2.5 font family
+ * 3. bg color
+ * 4. offset
+ * 5. icons     
+ */
+
+
+/*
+ * 1. LAYOUT
+ */
+.overflow-hidden{
+    overflow: hidden;
+}
+.pull-left {
+  float: left; 
+}
+.pull-right {
+  float: right; 
+}
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+.fade {
+  opacity: 0;
+  .transition(opacity 0.15s ease);
+}
+.fade.in {
+  opacity: 1;
+}
+.collapse {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  .transition(height 0.35s ease);
+}
+.collapse.in {
+  height: auto;
+}
+
+/*
+ * 2.1 TEXT COLOR
+ */
+.text-color{
+  color: #000;
+}
+
+/*
+ * 2.2 TEXT SIZE
+ */
+.text-size{
+  font-size: 0;
+}
+
+/*
+ * 2.3 TEXT LAYOUT
+ */
+.text-left {
+  text-align: left;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.text-justify {
+  text-align: justify;
+}
+
+/*
+ * 2.4 TEXT STYLE
+ */
+.text-bold{
+  font-weight: bold;
+}
+.text-normal{
+  font-weight: normal;
+}
+.text-break{
+  white-space: pre;            
+  white-space: pre-wrap;       
+  white-space: pre-line;       
+  white-space: -pre-wrap;      
+  white-space: -o-pre-wrap;   
+  white-space: -moz-pre-wrap;   
+  white-space: -hp-pre-wrap;  
+  word-wrap: break-word;       
+}
+.text-nounder{
+  text-decoration: none
+}
+/*
+ * 2.4 TEXT FONT FAMILY
+ */
+.text-FONTNAME{
+  font-family: arial;
+}
+/*
+ * 3. BG COLOR
+ */
+.bg-color{
+  background-color: #000;
+}
+
+/* 4. OFFSET */
+@offset: 5px;
+
+.offset-t-2{
+  margin-top: 2px;
+}
+.offset-t-3{
+  margin-top: 3px;
+}
+.offset-t-5{
+  margin-top: @offset * 1;
+}
+.offset-t-10{
+  margin-top: @offset * 2;
+}
+.offset-t-15{
+  margin-top: @offset * 3;
+}
+.offset-t-20{
+  margin-top: @offset * 4;
+}
+.offset-t-25{
+  margin-top: @offset * 5;
+}
+.offset-t-50{
+  margin-top: @offset * 10;
+}
+.offset-t-75{
+  margin-top: @offset * 15;
+}
+.offset-t-100{
+  margin-top: @offset * 20;
+}
+
+
+.offset-b-2{
+  margin-bottom: 2px;
+}
+.offset-b-3{
+  margin-bottom: 3px;
+}
+.offset-b-5{
+  margin-bottom: @offset * 1;
+}
+.offset-b-10{
+  margin-bottom: @offset * 2;
+}
+.offset-b-15{
+  margin-bottom: @offset * 3;
+}
+.offset-b-20{
+  margin-bottom: @offset * 4;
+}
+.offset-b-25{
+  margin-bottom: @offset * 5;
+}
+.offset-b-50{
+  margin-bottom: @offset * 10;
+}
+.offset-b-75{
+  margin-bottom: @offset * 15;
+}
+.offset-b-100{
+  margin-bottom: @offset * 20;
+}
+
+
+
+
+.offset-l-2{
+  margin-left: 2px;
+}
+.offset-l-3{
+  margin-left: 3px;
+}
+.offset-l-5{
+  margin-left: @offset * 1;
+}
+.offset-l-10{
+  margin-left: @offset * 2;
+}
+.offset-l-15{
+  margin-left: @offset * 3;
+}
+.offset-l-20{
+  margin-left: @offset * 4;
+}
+.offset-l-25{
+  margin-left: @offset * 5;
+}
+.offset-l-50{
+  margin-left: @offset * 10;
+}
+.offset-l-75{
+  margin-left: @offset * 15;
+}
+.offset-l-100{
+  margin-left: @offset * 20;
+}
+
+
+.offset-r-2{
+  margin-right: 2px;
+}
+.offset-r-3{
+  margin-right: 3px;
+}
+.offset-r-5{
+  margin-right: @offset * 1;
+}
+.offset-r-10{
+  margin-right: @offset * 2;
+}
+.offset-r-15{
+  margin-right: @offset * 3;
+}
+.offset-r-20{
+  margin-right: @offset * 4;
+}
+.offset-r-25{
+  margin-right: @offset * 5;
+}
+.offset-r-50{
+  margin-right: @offset * 10;
+}
+.offset-r-75{
+  margin-right: @offset * 15;
+}
+.offset-r-100{
+  margin-right: @offset * 20;
+}
+
+
+.offset-tb-2{
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+.offset-tb-3{
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+.offset-tb-5{
+  margin-top: @offset * 1;
+  margin-bottom: @offset * 1;
+}
+.offset-tb-10{
+  margin-top: @offset * 2;
+  margin-bottom: @offset * 2;
+}
+.offset-tb-15{
+  margin-top: @offset * 3;
+  margin-bottom: @offset * 3;
+}
+.offset-tb-20{
+  margin-top: @offset * 4;
+  margin-bottom: @offset * 4;
+}
+.offset-tb-25{
+  margin-top: @offset * 5;
+  margin-bottom: @offset * 5;
+}
+.offset-tb-50{
+  margin-top: @offset * 10;
+  margin-bottom: @offset * 10;
+}
+.offset-tb-75{
+  margin-top: @offset * 15;
+  margin-bottom: @offset * 15;
+}
+.offset-tb-100{
+  margin-top: @offset * 20;
+  margin-bottom: @offset * 20;
+}
+
+
+.offset-lr-2{
+  margin-left: 2px;
+  margin-right: 2px;
+}
+.offset-lr-3{
+  margin-left: 3px;
+  margin-right: 3px;
+}
+.offset-lr-5{
+  margin-left: @offset * 1;
+  margin-right: @offset * 1;
+}
+.offset-lr-10{
+  margin-left: @offset * 2;
+  margin-right: @offset * 2;
+}
+.offset-lr-15{
+  margin-left: @offset * 3;
+  margin-right: @offset * 3;
+}
+.offset-lr-20{
+  margin-left: @offset * 4;
+  margin-right: @offset * 4;
+}
+.offset-lr-25{
+  margin-left: @offset * 5;
+  margin-right: @offset * 5;
+}
+.offset-lr-50{
+  margin-left: @offset * 10;
+  margin-right: @offset * 10;
+}
+.offset-lr-75{
+  margin-left: @offset * 15;
+  margin-right: @offset * 15;
+}
+.offset-lr-100{
+  margin-left: @offset * 20;
+  margin-right: @offset * 20;
+}
+
+.offset-null {
+  margin: 0;
+  padding: 0;
+}
+
+/* 
+ * 5. ICONS
+ */
+.icon{
+  .inline-block();
+}

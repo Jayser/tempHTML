@@ -1,22 +1,19 @@
-// UTILITY MIXINS https://github.com/twitter/bootstrap/blob/master/less/mixins.less
-// ---------------------------------------------------------------------------------
-.clearfix(){
-  *zoom: 1;
+// https://github.com/twbs/bootstrap/blob/master/less/mixins.less
+
+// Utilities
+// -------------------------
+// Clearfix Source: http://nicolasgallagher.com/micro-clearfix-hack/
+.clearfix() {
   &:before,
   &:after {
-    display: table;
-    content: "";
-    // Fixes Opera/contenteditable bug:
-    // http://nicolasgallagher.com/micro-clearfix-hack/#comment-36952
-    line-height: 0;
+    content: " "; /* 1 */
+    display: table; /* 2 */
   }
   &:after {
     clear: both;
   }
 }
-// CSS image replacement
-// -------------------------
-// Source: https://github.com/h5bp/html5-boilerplate/commit/aa0396eae757
+// CSS image replacement Source: https://github.com/h5bp/html5-boilerplate/commit/aa0396eae757
 .hide-text(){
   font: 0/0 a;
   color: transparent;
@@ -24,8 +21,27 @@
   background-color: transparent;
   border: 0;
 }
+// Placeholder text
+.placeholder(@color: @input-color-placeholder) {
+  &:-moz-placeholder            { color: @color; } // Firefox 4-18
+  &::-moz-placeholder           { color: @color; } // Firefox 19+
+  &:-ms-input-placeholder       { color: @color; } // Internet Explorer 10+
+  &::-webkit-input-placeholder  { color: @color; } // Safari and Chrome
+}
+// Text overflow
+// Requires inline-block or block for proper styling
+.text-overflow() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 // BOX-MODEL
 // --------------------------------------------------
+.center-block() {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 .inline-block() {
   display: inline-block;
   *display: inline; 
